@@ -1,3 +1,7 @@
+import sys
+import os
+sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+
 from typing import TYPE_CHECKING
 from sqlalchemy import String, DateTime, func, CheckConstraint
 from sqlalchemy.orm import Mapped, mapped_column, relationship
