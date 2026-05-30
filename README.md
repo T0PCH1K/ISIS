@@ -19,35 +19,20 @@
 ## 📂 Структура репозитория
 ```text
 app/
-├── api/ # API эндпоинты (роутеры FastAPI)
-├── core/ # Конфигурация, зависимости (config, deps)
 ├── models/ # SQLAlchemy 2.0 модели (User, Restaurant, MenuItem, Order, OrderItem)
 │ ├── init.py
-│ ├── user.py # Модель пользователя (клиент, курьер, админ)
-│ ├── restaurant.py # Модель ресторана
-│ ├── menu_item.py # Модель блюда меню
-│ └── order.py # Модели заказа и позиций заказа
-├── schemas/ # Pydantic схемы для валидации запросов/ответов
-├── database.py # Подключение к БД, Base, SessionLocal
-└── main.py # Точка входа FastAPI приложения
+│ ├── user.py 
+│ ├── restaurant.py 
+│ ├── menu_item.py 
+│ ├──database.py
+│ └── order.py 
+└── main.py 
+└── factories.py 
+└──seed.py 
 
 alembic/ # Миграции базы данных (Alembic)
 ├── versions/ # Файлы миграций
 ├── env.py # Конфигурация окружения Alembic
 └── alembic.ini # Настройки подключения к БД
 
-factories/ # Фабрики для генерации тестовых/seed данных
-├── init.py
-└── factories.py # UserFactory, RestaurantFactory, MenuItemFactory, OrderFactory
-
-tests/ # Юнит- и интеграционные тесты
-
-docs/ # Документация проекта
-├── BPMN/ # Диаграммы бизнес-процессов
-├── ERD/ # ER-диаграммы базы данных
-└── Use_Case/ # Use Case диаграммы
-
-seed.py # Скрипт для наполнения БД тестовыми данными
-docker-compose.yml # Docker Compose конфигурация
-requirements.txt # Зависимости Python
-README.md # Документация проекта
+README.md 
